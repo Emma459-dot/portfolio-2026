@@ -128,6 +128,7 @@ const App = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setVideoInView(true);
+            videoRef.current?.play().catch(err => console.log("Lecture bloquée :", err));
           }
         });
       },
